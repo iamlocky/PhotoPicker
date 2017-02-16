@@ -86,7 +86,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.glassLake:PhotoPicker:1.0.2'
+	        compile 'com.github.glassLake:PhotoPicker:1.0.3'
 	}
 
 
@@ -133,7 +133,7 @@ recyclerViewShowOnly.init(this,MultiPickResultView.ACTION_ONLY_SHOW,pathslook);
 ### Pick Photo
 
 ```java
-PhotoPickUtils.startPick(this);
+PhotoPickUtils.startPick(Activity context,boolean showGif,int photoCount,ArrayList<String> photos)
 ```
 
 ### 

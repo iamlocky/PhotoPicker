@@ -1,5 +1,6 @@
 package me.iwf.PhotoPickerDemo;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -255,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
             .setPhotoCount(9)
             .setGridColumnCount(4)
             .start(this);*/
-        PhotoPickUtils.startPick(this,null);
+        PhotoPickUtils.startPick(this,false,1,null);
         break;
       }
 

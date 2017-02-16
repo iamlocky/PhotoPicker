@@ -48,11 +48,11 @@ public class PhotoPickUtils {
 
     }
 
-    public static void startPick(Activity context,ArrayList<String> photos){
+    public static void startPick(Activity context,boolean showGif,int photoCount,ArrayList<String> photos){
         PhotoPicker.builder()
-                .setPhotoCount(9)
-                .setShowCamera(true)
-                .setShowGif(true)
+                .setPhotoCount(photoCount)
+                .setShowCamera(false)
+                .setShowGif(showGif)
                 .setSelected(photos)
                 .setPreviewEnabled(true)
                 .start(context, PhotoPicker.REQUEST_CODE);

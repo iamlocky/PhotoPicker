@@ -1,7 +1,7 @@
 
 # 微信ui版的PhotoPicker
 # 注: 此项目已转移至本人主账号下:在那里继续更新
-[PhotoPicker](https://github.com/hss01248/PhotoPicker)
+[主账号下的PhotoPicker](https://github.com/hss01248/PhotoPicker)
 
 
 [![](https://jitpack.io/v/glassLake/PhotoPicker.svg)](https://jitpack.io/#glassLake/PhotoPicker)

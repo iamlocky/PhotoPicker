@@ -1,5 +1,8 @@
 
 # 微信ui版的PhotoPicker
+# 注: 此项目已转移至本人主账号下:在那里继续更新
+[PhotoPicker](https://github.com/hss01248/PhotoPicker)
+
 
 [![](https://jitpack.io/v/glassLake/PhotoPicker.svg)](https://jitpack.io/#glassLake/PhotoPicker)
 ## 注: 图片选择/拍照->裁剪->压缩 整个流程的操作已经串起到下面的库中

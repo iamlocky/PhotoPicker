@@ -40,6 +40,14 @@ public class MultiPickResultView extends FrameLayout {
 
     private int action;
 
+    public int getMaxCount() {
+        return maxCount;
+    }
+
+    public void setMaxCount(int maxCount) {
+        this.maxCount = maxCount;
+    }
+
     private int maxCount;
 
 
@@ -82,8 +90,9 @@ public class MultiPickResultView extends FrameLayout {
         this(context, attrs, defStyleAttr);
     }
 
-    public void init(Activity context,@MultiPicAction  int action, ArrayList<String> photos){
+    public void init(Activity context,int maxCount,@MultiPicAction  int action, ArrayList<String> photos){
         this.action = action;
+        this.maxCount=maxCount;
         if (action == MultiPickResultView.ACTION_ONLY_SHOW){//当只用作显示图片时,一行显示3张
             recyclerView.setLayoutManager(new StaggeredGridLayoutManager(3, OrientationHelper.VERTICAL));
         }
@@ -94,7 +103,7 @@ public class MultiPickResultView extends FrameLayout {
         if (photos != null && photos.size() >0){
             selectedPhotos.addAll(photos);
         }
-        photoAdapter = new PhotoAdapter(context, selectedPhotos);
+        photoAdapter = new PhotoAdapter(context, selectedPhotos,this.maxCount);
         photoAdapter.setAction(action);
         recyclerView.setAdapter(photoAdapter);
         //recyclerView.setLayoutFrozen(true);

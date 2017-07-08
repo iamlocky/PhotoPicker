@@ -37,10 +37,20 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.PhotoViewHol
 
   private int action;
 
+  public int getMaxCount() {
+    return maxCount;
+  }
+
+  public void setMaxCount(int maxCount) {
+    this.maxCount = maxCount;
+  }
+
+  private int maxCount=9;
 
 
 
-  public PhotoAdapter(Context mContext, ArrayList<String> photoPaths) {
+  public PhotoAdapter(Context mContext, ArrayList<String> photoPaths,int maxCount) {
+    this.maxCount=maxCount;
     this.photoPaths = photoPaths;
     this.mContext = mContext;
     inflater = LayoutInflater.from(mContext);
@@ -98,10 +108,10 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.PhotoViewHol
         holder.ivPhoto.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
-            if (photoPaths != null && photoPaths.size() ==9){
-              Toast.makeText(mContext,"已选了9张图片",Toast.LENGTH_SHORT).show();
+            if (photoPaths != null && photoPaths.size() ==maxCount){
+              Toast.makeText(mContext,"已选了"+maxCount+"张图片",Toast.LENGTH_SHORT).show();
             }else {
-              PhotoPickUtils.startPick((Activity) mContext,false,9,photoPaths);
+              PhotoPickUtils.startPick((Activity) mContext,false,maxCount,photoPaths);
             }
           }
         });
